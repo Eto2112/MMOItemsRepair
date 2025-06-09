@@ -1,0 +1,41 @@
+name: MMOItemsRepair
+version: 1.0.0
+main: com.eto2112.mmoitemsrepair.MMOItemsRepair
+api-version: 1.21
+author: Eto2112
+description: Special repair system for MMOItems with custom GUI
+website: https://github.com/Eto2112/MMOItemsRepair
+
+depend:
+  - MMOItems
+
+commands:
+  repair:
+    description: Open repair menu for held MMOItem
+    usage: /<command>
+    permission: mmoitemsrepair.use
+    permission-message: You don't have permission to use this command!
+    aliases: [fix, mmorepair]
+
+  mmoitemsrepair:
+    description: Main plugin command
+    usage: /<command> <reload|version>
+    permission: mmoitemsrepair.admin
+    permission-message: You don't have permission to use this command!
+    aliases: [mir]
+
+permissions:
+  mmoitemsrepair.use:
+    description: Allow player to use /repair command
+    default: true
+
+  mmoitemsrepair.admin:
+    description: Allow player to use admin commands
+    default: op
+
+  mmoitemsrepair.*:
+    description: Grants all MMOItemsRepair permissions
+    default: op
+    children:
+      mmoitemsrepair.use: true
+      mmoitemsrepair.admin: true

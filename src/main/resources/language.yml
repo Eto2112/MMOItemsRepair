@@ -1,0 +1,87 @@
+# MMOItemsRepair Language Configuration
+# All messages support color codes using &
+
+# General messages
+prefix: '&8[&6⚒Repair&8] '
+no-permission: '&cYou don''t have permission to use this command!'
+player-only: '&cThis command can only be used by players!'
+reload-success: '&aConfiguration files reloaded successfully!'
+version-info: '&aMMOItemsRepair v{version} by Eto2112'
+
+# Repair system messages
+repair:
+  # Command feedback
+  no-item: '&cYou must be holding an item to repair!'
+  not-mmoitem: '&cYou must be holding a valid MMOItem!'
+  no-durability: '&cThis MMOItem doesn''t have a durability system!'
+  no-damage: '&aThis item is already at full durability!'
+  menu-error: '&cFailed to open repair menu. Please try again.'
+
+  # Repair process
+  success: '&a✓ Item repaired successfully!'
+  failed: '&cRepair failed! Please try again.'
+  insufficient-materials: '&cYou don''t have enough repair materials!'
+  materials-removed: '&7Consumed {amount} repair materials.'
+
+  # Material requirements
+  materials-needed: '&eRequired: &f{amount}x {material}'
+  materials-found: '&aFound: &f{amount}x {material}'
+
+  # Cost information
+  repair-cost: '&6Repair Cost: &f{materials} materials'
+  durability-info: '&7Durability: &c{current}&7/&a{max} &7({percentage}%)'
+
+  # Success rate
+  success-chance: '&7Success Rate: &a{rate}%'
+  repair-risk: '&cWarning: Repair may fail!'
+
+# Menu messages
+menu:
+  # Item names and descriptions
+  item-to-repair:
+    name: '&e📦 Item to Repair'
+    lore: ''
+
+  repair-materials:
+    name: '&b🔧 Repair Materials'
+    lore: ''
+
+  repaired-preview:
+    name: '&a✨ Repair Result'
+    lore:
+      - '&7Item after repair:'
+      - ''
+      - '&7Durability: &a{max}&7/&a{max} &7(100%)'
+      - '&aItem will be fully repaired!'
+
+  repair-button:
+    name: '&a⚒ REPAIR ITEM ⚒'
+    lore:
+      - '&7Click to repair your item'
+      - ''
+      - '&7Cost: &f{materials}x {material}'
+      - '&7Success Rate: &a{rate}%'
+      - ''
+      - '&eClick to repair!'
+
+  error-item:
+    name: '&cCannot Repair'
+    lore:
+      - '&7This item cannot be repaired'
+      - ''
+      - '&cPossible reasons:'
+      - '&c• Not holding an MMOItem'
+      - '&c• Item has no durability system'
+      - '&c• Item is already at full durability'
+
+# Status messages
+status:
+  sufficient: '&a✓ Sufficient'
+  insufficient: '&c✗ Insufficient'
+  not-found: '&c✗ Not Found'
+
+# Admin messages
+admin:
+  debug-enabled: '&aDebug mode enabled'
+  debug-disabled: '&cDebug mode disabled'
+  repair-logged: '&7[DEBUG] Repair: {player} repaired {item} using {materials}x {material}'

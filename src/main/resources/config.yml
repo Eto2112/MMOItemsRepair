@@ -1,0 +1,81 @@
+# MMOItemsRepair Configuration
+version: 1.0
+
+# Repair system settings
+repair:
+  # MMOItem type.id for repair materials (e.g., material.IRON_INGOT, consumable.REPAIR_KIT)
+  material-id: 'material.REPAIR_STONE'
+
+  # How much durability each repair material restores
+  durability-per-material: 100
+
+  # Require exact material match (true) or allow any MMOItem (false)
+  strict-material-check: true
+
+  # Repair cost multiplier based on item rarity/tier
+  cost-multipliers:
+    common: 1.0
+    uncommon: 1.2
+    rare: 1.5
+    epic: 2.0
+    legendary: 3.0
+    mythic: 5.0
+
+  # Repair success rate (1.0 = 100% success, 0.8 = 80% success)
+  success-rate: 1.0
+
+  # Show repair preview in menu
+  show-preview: true
+
+  # Close menu after successful repair
+  close-after-repair: true
+
+# GUI Settings
+gui:
+  # Menu title (supports color codes with &)
+  title: '&8⚒ Repair Station ⚒'
+
+  # Menu size (must be multiple of 9, max 54)
+  size: 27
+
+  # Slot positions
+  slots:
+    item-to-repair: 10      # Where damaged item appears
+    repair-materials: 12    # Where required materials appear
+    repaired-preview: 16    # Where repair result appears
+    repair-button: 14       # Fix button slot
+
+  # Menu decoration
+  decoration:
+    enabled: true
+
+    # Background glass
+    background:
+      material: 'gray_stained_glass_pane'
+      name: '&f'
+
+    # Repair button
+    repair-button:
+      material: 'anvil'
+      name: '&a⚒ REPAIR ITEM ⚒'
+      lore:
+        - '&7Click to repair your item'
+        - '&7Cost: {materials} repair materials'
+        - ''
+        - '&eClick to repair!'
+
+    # Error item (when can't repair)
+    error:
+      material: 'barrier'
+      name: '&cCannot Repair This Item'
+      lore:
+        - '&7This item cannot be repaired'
+        - '&7Reasons:'
+        - '&c• Not an MMOItem with durability'
+        - '&c• Item is already at full durability'
+
+# Debug settings
+debug:
+  enabled: false
+  log-repairs: true
+  log-material-checks: false
