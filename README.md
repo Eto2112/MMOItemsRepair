@@ -12,21 +12,6 @@
 
 **MMOItemsRepair** is a specialized Minecraft plugin that provides an interactive repair system for MMOItems. It features a custom GUI interface, tier-based repair costs, and seamless integration with the MMOItems plugin.
 
-### ✨ Key Features
-- **Interactive Repair GUI** - Beautiful 27-slot menu with repair preview
-- **Tier-Based Costs** - Higher tier items cost more to repair
-- **Material-Based Repair** - Uses configurable MMOItems as repair materials
-- **Smart Validation** - Only works with damaged MMOItems that have durability
-- **Admin Commands** - Management and debugging tools
-- **Multi-Language Support** - Customizable messages
-- **Hot Reload** - Update configs without server restart
-
-### 🎯 Target Audience
-- **RPG Servers** - Perfect for custom weapon/armor repair systems
-- **Economy Servers** - Creates material-based repair economy
-- **Survival Servers** - Alternative to vanilla anvil repairs
-- **Custom Item Servers** - Essential for MMOItems-heavy servers
-
 ---
 
 ## 🚀 Installation
