@@ -28,7 +28,7 @@
    ```bash
    # Ensure these plugins are installed:
    - MMOItems 6.10.1+
-   - MMOCore (optional but recommended)
+   - Mythiclib
    ```
 
 2. **Install Plugin**
